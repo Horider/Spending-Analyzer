@@ -1,12 +1,13 @@
-package com.example.Spending.Analyzer.Entity;
+package SpendingAnalyzer.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Embeddable;
-import java.time.LocalDateTime;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * @author Horider@yandex.ru (Александр)
@@ -17,10 +18,12 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Embeddable
-public class Products {
+@Entity
+@Table(name = "income")
+public class Income {
 
+    @Id
+    private Long id;
+    private Integer theAmount;
     private String name;
-    private LocalDateTime date;
-    private int amount;
 }

@@ -1,6 +1,6 @@
-package com.example.Spending.Analyzer.Entity.FoodProducts;
+package SpendingAnalyzer.models.foodProducts;
 
-import com.example.Spending.Analyzer.Entity.Products;
+import SpendingAnalyzer.models.Product;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,11 +21,11 @@ import javax.persistence.Id;
 @Builder
 @Entity
 //Молочная продукция
-public class DairyProducts extends Products {
+public class DairyProduct extends Product {
 
     @Id
     private Long id;
 
     @Embedded
-    private Products products;
+    private Product product;
 }

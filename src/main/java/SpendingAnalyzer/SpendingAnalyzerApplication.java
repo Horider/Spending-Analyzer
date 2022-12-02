@@ -1,7 +1,7 @@
-package com.example.Spending.Analyzer;
+package SpendingAnalyzer;
 
-import com.example.Spending.Analyzer.Entity.Products;
-import com.example.Spending.Analyzer.Entity.Savings.Deposit;
+import SpendingAnalyzer.models.Product;
+import SpendingAnalyzer.models.savings.Deposit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -14,9 +14,9 @@ public class SpendingAnalyzerApplication {
 		SpringApplication.run(SpendingAnalyzerApplication.class, args);
 
 		Deposit deposit = Deposit.builder()
-				.products(Products.builder()
+				.product(Product.builder()
 						.name("Счет в Сбербанке")
-						.amount(10000)
+						.theAmount(10000)
 						.date(LocalDateTime.now())
 						.build())
 				.build();

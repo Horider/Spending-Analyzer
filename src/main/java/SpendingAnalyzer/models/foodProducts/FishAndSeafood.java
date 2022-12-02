@@ -1,6 +1,6 @@
-package com.example.Spending.Analyzer.Entity.Savings;
+package SpendingAnalyzer.models.foodProducts;
 
-import com.example.Spending.Analyzer.Entity.Products;
+import SpendingAnalyzer.models.Product;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,26 +13,18 @@ import javax.persistence.Id;
 /**
  * @author Horider@yandex.ru (Александр)
  * @version 1.0
- * @date 17.11.2022 23:26
+ * @date 17.11.2022 23:10
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Entity
-public class Deposit {
+public class FishAndSeafood extends Product {
 
     @Id
     private Long id;
 
     @Embedded
-    private Products products;
-
-    @Override
-    public String toString() {
-        return "Deposit{" +
-                "id=" + id +
-                ", products=" + products +
-                '}';
-    }
+    private Product product;
 }

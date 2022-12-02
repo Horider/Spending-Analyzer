@@ -1,14 +1,14 @@
-package com.example.Spending.Analyzer.Entity.FoodProducts;
+package SpendingAnalyzer.models;
 
-import com.example.Spending.Analyzer.Entity.Products;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Embedded;
+import javax.persistence.Embeddable;
 import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.Table;
+import java.time.LocalDateTime;
 
 /**
  * @author Horider@yandex.ru (Александр)
@@ -19,12 +19,12 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Embeddable
 @Entity
-public class MeatProducts extends Products {
+@Table(name = "product")
+public class Product {
 
-    @Id
-    private Long id;
-
-    @Embedded
-    private Products products;
+    private String name;
+    private LocalDateTime date;
+    private Integer theAmount;
 }

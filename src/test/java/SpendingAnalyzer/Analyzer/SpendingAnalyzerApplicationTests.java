@@ -1,4 +1,4 @@
-package com.example.Spending.Analyzer;
+package SpendingAnalyzer.Analyzer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

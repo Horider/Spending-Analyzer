@@ -1,6 +1,6 @@
-package com.example.Spending.Analyzer.Entity.BeautyAndHealth;
+package SpendingAnalyzer.models.foodProducts;
 
-import com.example.Spending.Analyzer.Entity.Products;
+import SpendingAnalyzer.models.Product;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,11 +20,11 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @Builder
 @Entity
-public class Medicines extends Products {
+public class MeatProduct extends Product {
 
     @Id
     private Long id;
 
     @Embedded
-    private Products products;
+    private Product product;
 }

@@ -1,12 +1,10 @@
-package com.example.Spending.Analyzer.Entity.FoodProducts;
+package SpendingAnalyzer.models;
 
-import com.example.Spending.Analyzer.Entity.Products;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -20,11 +18,10 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @Builder
 @Entity
-public class FishAndSeafood extends Products {
+public class Expense {
 
     @Id
     private Long id;
-
-    @Embedded
-    private Products products;
+    private Integer theAmount;
+    private String name;
 }

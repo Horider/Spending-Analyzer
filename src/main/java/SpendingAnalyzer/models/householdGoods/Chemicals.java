@@ -1,6 +1,6 @@
-package com.example.Spending.Analyzer.Entity.HouseholdGoods;
+package SpendingAnalyzer.models.householdGoods;
 
-import com.example.Spending.Analyzer.Entity.Products;
+import SpendingAnalyzer.models.Product;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,6 +26,6 @@ public class Chemicals {
     private Long id;
 
     @Embedded
-    private Products products;
+    private Product product;
 
 }
